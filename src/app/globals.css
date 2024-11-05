@@ -1,0 +1,228 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+   /* padding-top: 60px; */
+}
+nav {
+  position: fixed;
+  width: -webkit-fill-available;
+  z-index: 10000;
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+.gradient-text {
+  background: linear-gradient(180deg, #fff, #adadad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.animated-background{
+  background: linear-gradient(270deg, #7e1e9d, #4f46e5);
+  background-size: 200% 200%;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+  animation: gradient-animation 5s ease infinite;
+}
+.animated-gradient-button-dark {
+  background: linear-gradient(270deg, #5b1a7f, #3731b1); /* Darker shades */
+  background-size: 200% 200%;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Slightly darker shadow */
+  transition: transform 0.2s ease;
+  animation: gradient-animation 5s ease infinite;
+}
+.animated-gradient-button {
+  background: linear-gradient(270deg, #7e1e9d, #4f46e5);
+  background-size: 200% 200%;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+  animation: gradient-animation 5s ease infinite;
+}
+
+.animated-gradient-button:hover {
+  transform: scale(1.03);
+  background: linear-gradient(300deg, #7e1e9d, #4f46e5);
+}
+.animated-gradient-button:hover:active{
+   transform: scale(0.97);
+}
+.animated-gradient-button-dark:hover {
+  transform: scale(1.01);
+}
+.animated-gradient-button-dark:hover:active{
+   transform: scale(0.99);
+}
+.button-animation-2 {
+  background: linear-gradient(270deg, #d97706, #f59e0b);
+  background-size: 200% 200%;
+  transition: all 0.3s ease;
+}
+
+.button-animation-2:hover {
+  background-position: 100% 50%;
+  transform: scale(1.05);
+}
+
+.button-animation-2:active {
+  transform: scale(0.95);
+}
+.bg-blur {
+  background: rgba(255, 255, 255, 0.06); /* Lighter background with transparency */
+  backdrop-filter: blur(15px);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1); /* Light overlay */
+  backdrop-filter: blur(10px); /* Optional: add additional blur to overlay */
+  z-index: -1; /* Place behind the card */
+}
+
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px; /* Adjust width for vertical scrollbars */
+  height: 8px; /* Adjust height for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track {
+  background: #000000; /* Base background color */
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(270deg, #5b1a7f, #3731b1);
+  background-size: 200% 200%;
+  border-radius: 0.5rem;
+  animation: gradient-animation 5s ease infinite;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(270deg, #7e1e9d, #4f46e5);
+  background-size: 200% 200%;
+  animation: gradient-animation-hover 3s ease infinite;
+}
+
+/* Keyframes for the animated gradient */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient-animation-hover {
+  0% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
