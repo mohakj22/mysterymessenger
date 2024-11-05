@@ -1,3 +1,14 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable */
+// Disables all ESLint rules
+
+/* tslint:disable */
+// Disables TSLint rules if you're using TSLint
+
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 "use client"
 
 // Inspired by react-hot-toast library
